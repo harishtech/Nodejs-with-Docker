@@ -1,0 +1,206 @@
+{
+  "id": "43f27f76-a883-4d6f-b33e-32bb1eba0464",
+  "data": {
+    "results": [
+      {
+        "id": "0009057938",
+        "text": "Jane M. Johnson, NP",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009442954",
+        "text": "Mary Anne Johnson, PA-C",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009729214",
+        "text": "John E. Osborne, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0007460231",
+        "text": "John L. Lanciloti, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0005546010",
+        "text": "Samuel E Johnson, DO",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004116144",
+        "text": "Jon J. Johnston, DO",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004137540",
+        "text": "John W. Yee, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0007671030",
+        "text": "John C. Naftel, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0005451427",
+        "text": "Kendrick M. Johnson, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009194662",
+        "text": "John A. Abed, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0007086185",
+        "text": "John Wesley Hewitt, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009463217",
+        "text": "John B. Lee, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004065885",
+        "text": "John Andrew Uhl, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004310120",
+        "text": "John S. Chiles, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0007695634",
+        "text": "Michael John McCullough, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009488222",
+        "text": "John Estes Everett, DO",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009433950",
+        "text": "John M. D Spain, PA-C",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009438655",
+        "text": "John Erik Tveten, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004350947",
+        "text": "John L Grady, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004689079",
+        "text": "John S. Anshus, DO",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0005272013",
+        "text": "John Lloyd Fust, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009614230",
+        "text": "John Hewitt, PA-C",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0007331037",
+        "text": "John J. Ziomek, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004028740",
+        "text": "John Gould Kelsey, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009408787",
+        "text": "Gregory John Cordes, PA-C",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009130207",
+        "text": "John Andrew Frisbie, PA-C",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009156989",
+        "text": "John Kelly Nations, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004329952",
+        "text": "John Jeffery Zecherle, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0005752075",
+        "text": "John P. Sortor, OD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004525150",
+        "text": "John Gregory Telles, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009757945",
+        "text": "John P Burke, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0009447233",
+        "text": "Joseph John Ginejko, DO",
+        "type": "practitioner",
+        "default_procedure": null
+      },
+      {
+        "id": "0004110173",
+        "text": "John G Lalli, MD",
+        "type": "practitioner",
+        "default_procedure": null
+      }
+    ],
+    "weight": 0.3
+  }
+}

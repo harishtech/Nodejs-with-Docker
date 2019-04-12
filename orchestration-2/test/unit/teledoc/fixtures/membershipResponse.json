@@ -1,0 +1,12 @@
+{
+    "membershipResponse": {
+        "membershipDetail": {
+            "memberId": "263693978",
+            "person": {
+                "dateOfBirth": "1989-01-18",
+                "nameFirst": "Paola",
+                "nameLast": "Timus"
+            }
+        }
+    }
+}

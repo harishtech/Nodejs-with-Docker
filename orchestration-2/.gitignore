@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+.env
+VERSION
+envs
+newrelic_agent.log
+.DS_Store
+ci-artifacts/

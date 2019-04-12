@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 1002 - Gateway Error - API Key and/or APISecret authentication failed.",
+        "status": 500,
+        "title": "Internal Server Error"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response> <header> <statusCode>1002</statusCode> <statusDesc>Gateway Error - API Key and/or APISecret authentication failed.</statusDesc> <refId>Id-4474dc5b0c885e70c921470c</refId> </header> <details> </details> </response>"
+    }
+}

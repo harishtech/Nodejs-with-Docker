@@ -1,0 +1,194 @@
+{
+    "data": {
+        "membershipResponse": {
+            "membershipDetail": {
+                "dependents": [
+                    {
+                        "effectivePeriod": {
+                            "datetimeAsOf": "2018-09-28T04:00:00Z",
+                            "datetimeBegin": "2017-01-01T04:00:00Z",
+                            "datetimeEnd": "9999-12-31T04:00:00Z"
+                        },
+                        "enrollment": {
+                            "accountStructure": [
+                                {
+                                    "accountStructure": [
+                                        {
+                                            "accountStructure": [
+                                                {
+                                                    "code": "2",
+                                                    "level": 3,
+                                                    "type": "account"
+                                                }
+                                            ],
+                                            "code": "10",
+                                            "level": 2,
+                                            "type": "suffix"
+                                        },
+                                        {
+                                            "accountStructure": [
+                                                {
+                                                    "code": "2",
+                                                    "level": 3,
+                                                    "type": "plannumber"
+                                                }
+                                            ],
+                                            "code": "B",
+                                            "level": 2,
+                                            "type": "plansummary"
+                                        }
+                                    ],
+                                    "code": "751880",
+                                    "level": 1,
+                                    "type": "control"
+                                }
+                            ],
+                            "policyIdentifier": {
+                                "idSource": "3",
+                                "idType": "policies",
+                                "idValue": "751880+B+2",
+                                "resourceId": "3~751880+B+2"
+                            }
+                        },
+                        "individual": {
+                            "individualIdentifier": {
+                                "idSource": "",
+                                "idType": "",
+                                "idValue": "",
+                                "resourceId": ""
+                            }
+                        },
+                        "memberId": "264160115",
+                        "membershipIdentifier": {
+                            "idSource": "5",
+                            "idType": "memberships",
+                            "idValue": "264160115+10+2+20170101+751880+B+2",
+                            "resourceId": "5~264160115+10+2+20170101+751880+B+2"
+                        },
+                        "person": {
+                            "dateOfBirth": "2000-01-01",
+                            "gender": "F",
+                            "nameFirst": "Nabanita",
+                            "nameFull": "Nabanita Turziano",
+                            "nameLast": "Turziano",
+                            "nameMiddle": "",
+                            "nameSuffix": ""
+                        },
+                        "relationshipToSubscriber": "Child",
+                        "sequenceNumber": "02",
+                        "status": "Actively Covered"
+                    }
+                ],
+                "effectivePeriod": {
+                    "datetimeAsOf": "2018-09-28T04:00:00Z",
+                    "datetimeBegin": "2017-01-01T04:00:00Z",
+                    "datetimeEnd": "9999-12-31T04:00:00Z"
+                },
+                "enrollment": {
+                    "accountStructure": [
+                        {
+                            "accountStructure": [
+                                {
+                                    "accountStructure": [
+                                        {
+                                            "code": "2",
+                                            "level": 3,
+                                            "type": "account"
+                                        }
+                                    ],
+                                    "code": "10",
+                                    "level": 2,
+                                    "type": "suffix"
+                                },
+                                {
+                                    "accountStructure": [
+                                        {
+                                            "code": "2",
+                                            "level": 3,
+                                            "type": "plannumber"
+                                        }
+                                    ],
+                                    "code": "B",
+                                    "level": 2,
+                                    "type": "plansummary"
+                                }
+                            ],
+                            "code": "751880",
+                            "level": 1,
+                            "type": "control"
+                        }
+                    ],
+                    "policyIdentifier": {
+                        "idSource": "3",
+                        "idType": "policies",
+                        "idValue": "751880+B+2",
+                        "resourceId": "3~751880+B+2"
+                    }
+                },
+                "execMedicalPlanInd": "N",
+                "individual": {
+                    "individualIdentifier": {
+                        "idSource": "",
+                        "idType": "",
+                        "idValue": "",
+                        "resourceId": ""
+                    }
+                },
+                "memberId": "263956676",
+                "membershipIdentifier": {
+                    "idSource": "5",
+                    "idType": "memberships",
+                    "idValue": "263956676+10+2+20170101+751880+B+2",
+                    "resourceId": "5~263956676+10+2+20170101+751880+B+2"
+                },
+                "person": {
+                    "contacts": [
+                        {
+                            "postalAddresses": [
+                                {
+                                    "city": "AVONDALE ESTATES",
+                                    "postalCode": "30002",
+                                    "state": "GA",
+                                    "streetLine1": "68194 HANNING BAY CIRCLE",
+                                    "streetLine2": ""
+                                }
+                            ],
+                            "primaryPhone": {
+                                "number": ""
+                            }
+                        }
+                    ],
+                    "dateOfBirth": "1984-09-14",
+                    "gender": "F",
+                    "nameFirst": "Renee",
+                    "nameFull": "Renee Turziano",
+                    "nameLast": "Turziano",
+                    "nameMiddle": "",
+                    "nameSuffix": ""
+                },
+                "primaryCarrierIndicator": [
+                    {
+                        "code": "Medical",
+                        "valueShort": "Y"
+                    },
+                    {
+                        "code": "Dental",
+                        "valueShort": "Y"
+                    },
+                    {
+                        "code": "StdRx",
+                        "valueShort": "Y"
+                    },
+                    {
+                        "code": "NonStdRx",
+                        "valueShort": "Y"
+                    }
+                ],
+                "privacyRestriction": false,
+                "relationshipToSubscriber": "Self",
+                "sequenceNumber": "01",
+                "status": "Actively Covered"
+            }
+        }
+    }
+}

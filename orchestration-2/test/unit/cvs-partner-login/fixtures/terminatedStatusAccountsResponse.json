@@ -1,0 +1,94 @@
+{
+  "data": {
+    "accountResponse": {
+      "accountDetail": {
+        "readAccount": {
+          "assuranceLevel": 2,
+          "changePasswordURL": "https://qaxwww30.aetna.com/AccountManager/changePassword",
+          "individual": {
+            "individualIdentifier": {
+              "idSource": "15",
+              "idType": "individuals",
+              "idValue": "CB1JGBBBBPXY",
+              "resourceId": "15~CB1JGBBBBPXY"
+            },
+            "person": {
+              "contacts": {
+                "postalAddresses": {
+                  "country": {
+                    "code": ""
+                  }
+                }
+              },
+              "dateOfBirth": "1982-05-31",
+              "gender": "Male",
+              "nameFirst": "Chris",
+              "nameFull": "Chris J Mink",
+              "nameLast": "Mink",
+              "nameMiddle": "J",
+              "namePrefix": "",
+              "nameSuffix": ""
+            }
+          },
+          "memberships": [
+            {
+              "effectivePeriod": {
+                "datetimeAsOf": "2018-10-03T04:00:00Z",
+                "datetimeBegin": "2015-10-29T04:00:00Z",
+                "datetimeEnd": "2045-10-29T04:00:00Z"
+              },
+              "enrollment": {
+                "accountStructure": [
+                  {
+                    "accountStructure": [
+                      {
+                        "accountStructure": {
+                          "code": "4",
+                          "level": 3,
+                          "type": "account"
+                        },
+                        "code": "10",
+                        "level": 2,
+                        "type": "suffix"
+                      },
+                      {
+                        "accountStructure": {
+                          "code": "201",
+                          "level": 3,
+                          "type": "plannumber"
+                        },
+                        "code": "PA",
+                        "level": 2,
+                        "type": "plansummary"
+                      }
+                    ],
+                    "code": "758630",
+                    "level": 1,
+                    "type": "control"
+                  }
+                ],
+                "policyIdentifier": {
+                  "idSource": "3",
+                  "idType": "policies",
+                  "idValue": "758630+PA+201",
+                  "resourceId": "3~758630+PA+201"
+                }
+              },
+              "memberId": "261806856",
+              "membershipIdentifier": {
+                "idSource": "5",
+                "idType": "memberships",
+                "idValue": "261806856+10+4+20151029+758630+PA+201",
+                "resourceId": "5~261806856+10+4+20151029+758630+PA+201"
+              },
+              "relationshipToSubscriber": "Self",
+              "status": "Terminated Coverage"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 1003 - Gateway Error - Failed to translate the input parameters into gateway.",
+        "status": 503,
+        "title": "Service Unavailable"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response> <header> <statusCode>1003</statusCode> <statusDesc>CVS 1003 - Gateway Error - Failed to translate the input parameters into gateway.</statusDesc> <refId>Id-4474dc5b0c885e70c921470c</refId> </header> <details> </details> </response>"
+    }
+}

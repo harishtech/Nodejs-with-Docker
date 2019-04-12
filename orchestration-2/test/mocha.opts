@@ -1,0 +1,2 @@
+--file ./test/disableCaching.js
+--file ./test/disableLogging.js

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 1001 - Gateway Error - One or more Input Parameters to the service is missing or incorrect.",
+        "status": 503,
+        "title": "Service Unavailable"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response> <header> <statusCode>1001</statusCode> <statusDesc>Gateway Error - One or more Input Parameters to the service is missing or incorrect.</statusDesc> <refId>Id-4474dc5b0c885e70c921470c</refId> </header> <details> </details> </response>"
+    }
+}

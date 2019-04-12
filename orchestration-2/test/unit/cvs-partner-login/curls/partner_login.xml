@@ -1,0 +1,12 @@
+<partnerLoginRequest>
+  <member>
+    <firstName>CHRIS</firstName>
+    <lastName>MINK</lastName>
+    <gender>M</gender>
+    <dateOfBirth>1982-05-31</dateOfBirth>
+  </member>
+  <partner>
+    <clientCode>X7700</clientCode>
+    <externalId>260895696</externalId>
+  </partner>
+</partnerLoginRequest>

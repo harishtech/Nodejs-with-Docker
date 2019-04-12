@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 2017 - Gateway Error - HMAC Authentication fail.",
+        "status": 500,
+        "title": "Internal Server Error"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response> <header> <statusCode>2017</statusCode> <statusDesc>Gateway Error HMAC Authentication fail.</statusDesc> <refId>Id-4474dc5b0c885e70c921470c</refId> </header> <details> </details> </response>"
+    }
+}

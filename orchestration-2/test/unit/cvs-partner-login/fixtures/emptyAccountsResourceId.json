@@ -1,0 +1,146 @@
+{
+    "data": {
+        "accountResponse": {
+            "accountDetail": {
+                "readAccount": {
+                    "assuranceLevel": 2,
+                    "changePasswordURL": "https://qaxwww30.aetna.com/AccountManager/changePassword",
+                    "individual": {
+                        "individualIdentifier": {
+                            "idSource": "15",
+                            "idType": "individuals",
+                            "idValue": "2565LFFFFPXZ",
+                            "resourceId": "15~2565LFFFFPXZ"
+                        },
+                        "person": {
+                            "contacts": {
+                                "postalAddresses": {
+                                    "country": {
+                                        "code": ""
+                                    }
+                                }
+                            },
+                            "dateOfBirth": "1984-09-14",
+                            "gender": "Female",
+                            "nameFirst": "Renee",
+                            "nameFull": "Renee Turziano",
+                            "nameLast": "Turziano",
+                            "nameMiddle": "",
+                            "namePrefix": "",
+                            "nameSuffix": ""
+                        }
+                    },
+                    "memberships": [
+                        {
+                            "effectivePeriod": {
+                                "datetimeAsOf": "2018-09-28T04:00:00Z",
+                                "datetimeBegin": "2017-01-01T04:00:00Z",
+                                "datetimeEnd": "9999-12-31T04:00:00Z"
+                            },
+                            "enrollment": {
+                                "accountStructure": [
+                                    {
+                                        "accountStructure": [
+                                            {
+                                                "accountStructure": {
+                                                    "code": "1",
+                                                    "level": 3,
+                                                    "type": "account"
+                                                },
+                                                "code": "10",
+                                                "level": 2,
+                                                "type": "suffix"
+                                            },
+                                            {
+                                                "accountStructure": {
+                                                    "code": "1",
+                                                    "level": 3,
+                                                    "type": "plannumber"
+                                                },
+                                                "code": " A",
+                                                "level": 2,
+                                                "type": "plansummary"
+                                            }
+                                        ],
+                                        "code": "751880",
+                                        "level": 1,
+                                        "type": "control"
+                                    }
+                                ],
+                                "policyIdentifier": {
+                                    "idSource": "3",
+                                    "idType": "policies",
+                                    "idValue": "751880+A+1",
+                                    "resourceId": "3~751880+A+1"
+                                }
+                            },
+                            "memberId": "263956676",
+                            "membershipIdentifier": {
+                                "idSource": "5",
+                                "idType": "memberships",
+                                "idValue": "263956676+10+1+20170101+751880+A+1",
+                                "resourceId": ""
+                            },
+                            "relationshipToSubscriber": "Self",
+                            "status": "Actively Covered"
+                        },
+                        {
+                            "effectivePeriod": {
+                                "datetimeAsOf": "2018-09-28T04:00:00Z",
+                                "datetimeBegin": "2017-01-01T04:00:00Z",
+                                "datetimeEnd": "9999-12-31T04:00:00Z"
+                            },
+                            "enrollment": {
+                                "accountStructure": [
+                                    {
+                                        "accountStructure": [
+                                            {
+                                                "accountStructure": {
+                                                    "code": "2",
+                                                    "level": 3,
+                                                    "type": "account"
+                                                },
+                                                "code": "10",
+                                                "level": 2,
+                                                "type": "suffix"
+                                            },
+                                            {
+                                                "accountStructure": {
+                                                    "code": "2",
+                                                    "level": 3,
+                                                    "type": "plannumber"
+                                                },
+                                                "code": " B",
+                                                "level": 2,
+                                                "type": "plansummary"
+                                            }
+                                        ],
+                                        "code": "751880",
+                                        "level": 1,
+                                        "type": "control"
+                                    }
+                                ],
+                                "policyIdentifier": {
+                                    "idSource": "3",
+                                    "idType": "policies",
+                                    "idValue": "751880+B+2",
+                                    "resourceId": "3~751880+B+2"
+                                }
+                            },
+                            "memberId": "263956676",
+                            "membershipIdentifier": {
+                                "idSource": "5",
+                                "idType": "memberships",
+                                "idValue": "263956676+10+2+20170101+751880+B+2",
+                                "resourceId": "5~263956676+10+2+20170101+751880+B+2"
+                            },
+                            "relationshipToSubscriber": "Self",
+                            "status": "Actively Covered"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+

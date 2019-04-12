@@ -1,0 +1,14 @@
+{
+  "id": "eaa46d9d-3108-49d0-9160-ab50603cccde",
+  "data": {
+    "results": [
+      {
+        "id": "1036",
+        "type": "specialty",
+        "text": "Knee Surgery",
+        "default_procedure": ""
+      }
+    ],
+    "weight": 0.9
+  }
+}

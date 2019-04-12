@@ -1,0 +1,33 @@
+{
+  "id": "76edc26a-47e2-4eb7-9d91-ee6b2e72522b",
+  "data": {
+    "results": [
+      {
+        "id": "1826",
+        "type": "procedure",
+        "text": "Established Patient Office Visit (Knee Surgery)"
+      },
+      {
+        "id": "532",
+        "type": "procedure",
+        "text": "MRI of the Leg, Knee or Ankle (Lower Extremity)"
+      },
+      { "id": "1619", "type": "procedure", "text": "X-Ray of Knee" },
+      {
+        "id": "235",
+        "type": "procedure",
+        "text": "Total Knee Replacement - 1 Side"
+      },
+      {
+        "id": "2399",
+        "type": "procedure",
+        "text": "CT Scan of the Leg, Knee or Ankle (Lower Extremities)"
+      },
+      {
+        "id": "1924",
+        "type": "procedure",
+        "text": "Office Consultation ONLY for new or established patients, no testing (Surgery, Knee)"
+      }
+    ]
+  }
+}

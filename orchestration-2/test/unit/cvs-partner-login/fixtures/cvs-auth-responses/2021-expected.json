@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 2021 - Registration Details Does not match",
+        "status": 500,
+        "title": "Internal Server Error"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response> <header> <statusCode>2021</statusCode> <statusDesc>Registration Details Does not match</statusDesc> <refId>Id-4474dc5b0c885e70c921470c</refId> </header> <details> </details> </response>"
+    }
+}

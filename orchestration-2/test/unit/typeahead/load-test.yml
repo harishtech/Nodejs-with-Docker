@@ -1,0 +1,25 @@
+config:
+  target: 'http://localhost:8080'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+scenarios:
+  - flow:
+    - post:
+        url: "/typeahead"
+        json:
+          gender: "M"
+          member_id: "263688577"
+          specialty_id: "870"
+          latlng: "36.778261, -119.417932"
+          q: "Lipitar"
+          plan_summary: "BB"
+          first_name: "Rylee"
+          limit: "50"
+          membership_id: "5~263688577+20+1+20180101+787969+IC+1"
+          current_phase: "deductible"
+          group_number: "078796902000001"
+          control_number: "754706"
+          date_of_birth: "1980-02-09"
+          last_name: "Fixari"
+          plan_sponsor: "DMT-DIGITAL-LHLH"

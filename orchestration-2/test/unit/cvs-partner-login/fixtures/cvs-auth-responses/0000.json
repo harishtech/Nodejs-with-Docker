@@ -1,0 +1,3 @@
+{
+    "data": "<response> <header> <statusCode>0000</statusCode> <statusDesc>SUCCESS</statusDesc> <refId>Id-ca7edc5b8d8b96347833bf80</refId> <tokenID>5B30070ABF383EFB9EFFBE573D4AC971</tokenID> <deviceID>device12345</deviceID> </header> <detail> <memberInfo> <firstName>CHRIS</firstName> <lastName>MINK</lastName> <gender>M</gender> <dateOfBirth>1982-05-31</dateOfBirth> </memberInfo> </detail> </response> "
+}

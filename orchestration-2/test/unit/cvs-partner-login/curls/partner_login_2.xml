@@ -1,0 +1,12 @@
+<partnerLoginRequest>
+  <member>
+    <firstName>HORDON </firstName>
+    <lastName>HAREN</lastName>
+    <gender>M</gender>
+    <dateOfBirth>1970-11-11</dateOfBirth>
+  </member>
+  <partner>
+    <clientCode>BLNK</clientCode>
+    <externalId>SR964100101</externalId>
+  </partner>
+</partnerLoginRequest>

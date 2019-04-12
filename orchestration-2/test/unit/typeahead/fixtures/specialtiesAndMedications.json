@@ -1,0 +1,113 @@
+{
+  "id": "0ca37d29-cd1e-4fdd-b59d-4eb1e7528da7",
+  "data": {
+    "results": [
+      {
+        "id": "f61cf6a80a4ab276735b9b6040eed1cf",
+        "type": "medication",
+        "text": "Cardizem 120mg Tab"
+      },
+      {
+        "id": "71ea84c1019c525965be01056e305ef2",
+        "type": "medication",
+        "text": "Cardizem CD 240mg Cap"
+      },
+      {
+        "id": "6aac7f50b6112f34801ae17f18e512c6",
+        "type": "medication",
+        "text": "Cardizem LA 360mg Tab"
+      },
+      {
+        "id": "06a5854f58bdbb7ec3b8384ad6ee4339",
+        "type": "medication",
+        "text": "Cardizem CD 360mg Cap"
+      },
+      {
+        "id": "a0430a99cb661b857ee2de01405493e8",
+        "type": "medication",
+        "text": "Cardizem CD 120mg Cap"
+      },
+      {
+        "id": "a2ef6fe12c842332310721dad519fbd7",
+        "type": "medication",
+        "text": "Cardizem LA 240mg Tab"
+      },
+      {
+        "id": "18db4c765ae9df070d873b6117066da0",
+        "type": "medication",
+        "text": "Cardizem LA 120mg Tab"
+      },
+      {
+        "id": "ef54155d2ee44c8e5761a12b9b5c263c",
+        "type": "medication",
+        "text": "Cardizem 30mg Tab"
+      },
+      {
+        "id": "30617c8749e53f55c44fadc819cd0dd2",
+        "type": "medication",
+        "text": "Cardizem LA 420mg Tab"
+      },
+      {
+        "id": "f2e1fe25d431da2d5cd6230f5273f112",
+        "type": "medication",
+        "text": "Cardizem CD 300mg Cap"
+      },
+      {
+        "id": "fdbc44659a00fc07cd5efff0b9dee333",
+        "type": "medication",
+        "text": "Cardizem LA 180mg Tab"
+      },
+      {
+        "id": "5902a7bac22d9b91c3c7e46aad163110",
+        "type": "medication",
+        "text": "Cardizem 60mg Tab"
+      },
+      {
+        "id": "305d4294f8f5508715c735399a6127a8",
+        "type": "medication",
+        "text": "Cardizem LA 300mg Tab"
+      },
+      {
+        "id": "8074f2f3cbef299f3a4df3a1e8aad2c4",
+        "type": "medication",
+        "text": "Cardizem CD 180mg Cap"
+      },
+      {
+        "id": "b1b95ba31fc2dfcaffe01460680c11d4",
+        "type": "medication",
+        "text": "Cardura XL 8mg Tab"
+      },
+      {
+        "id": "839",
+        "type": "specialty",
+        "text": "Cardiology",
+        "default_procedure": ""
+      },
+      {
+        "id": "726",
+        "type": "specialty",
+        "text": "Interventional Cardiology",
+        "default_procedure": ""
+      },
+      {
+        "id": "824",
+        "type": "specialty",
+        "text": "Pediatric Cardiology",
+        "default_procedure": ""
+      },
+      {
+        "id": "701",
+        "type": "specialty",
+        "text": "Cardiothoracic Surgery",
+        "default_procedure": ""
+      },
+      {
+        "id": "1033",
+        "type": "specialty",
+        "text": "Congenital Cardiac/Thoracic Surgery",
+        "default_procedure": ""
+      }
+    ],
+    "weight": 0.9
+  }
+}

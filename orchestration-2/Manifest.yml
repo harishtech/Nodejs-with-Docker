@@ -1,0 +1,110 @@
+---
+ProjectName: Orchestration
+Templates:
+- ./templates/Service.yml
+Roles:
+  Dev-${STACK_NAMESPACE}: arn:aws:iam::898916586688:role/dev-deployer
+  Stress-${STACK_NAMESPACE}: arn:aws:iam::898916586688:role/stress-deployer
+  Qa-Master: arn:aws:iam::898916586688:role/qa-deployer
+  Prd-Master: arn:aws:iam::283993462732:role/prd-deployer
+NotificationArns:
+  Dev-${STACK_NAMESPACE}: ["arn:aws:sns:us-east-1:898916586688:DevCloudformationEvents"]
+  Stress-${STACK_NAMESPACE}: ["arn:aws:sns:us-east-1:898916586688:StressCloudformationEvents"]
+  Qa-${STACK_NAMESPACE}: ["arn:aws:sns:us-east-1:898916586688:QaCloudformationEvents"]
+  Prd-${STACK_NAMESPACE}: ["arn:aws:sns:us-east-1:283993462732:PrdCloudformationEvents"]
+Parameters:
+  Dev-${STACK_NAMESPACE}:
+    Service:
+      StackContext: DevContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: ${stack_namespace}-orchestration.dev.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:898916586688:DevTeamsNotifier"
+      RabbitHostName: rabbitmq.dev.aetnadigital.net
+      RabbitProtocol: amqps
+      CvsHostname: "sit2-2waysslservices.caremark.com"
+      CvsWebComponentBaseUrl: "sit2fast.caremark.com"
+      ApicOauthUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/v5/auth/oauth2/token"
+      ApicAccountsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v3/accounts/"
+      ApicMembershipsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v5/memberships/"
+      DocasapUrl: "https://apitest.docasap.com:8443"
+      TeledocIssuer: "AETNA"
+      NodeEnvironment: "development"
+      CacheEnabled: "true"
+
+  Dev-Master:
+    Service:
+      StackContext: DevContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: orchestration.dev.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:898916586688:DevTeamsNotifier"
+      RabbitHostName: rabbitmq.dev.aetnadigital.net
+      RabbitProtocol: amqps
+      CvsHostname: "sit2-2waysslservices.caremark.com"
+      CvsWebComponentBaseUrl: "sit2fast.caremark.com"
+      ApicOauthUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/v5/auth/oauth2/token"
+      ApicAccountsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v3/accounts/"
+      ApicMembershipsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v5/memberships/"
+      DocasapUrl: "https://apitest.docasap.com:8443"
+      TeledocIssuer: "AETNA"
+      NodeEnvironment: "development"
+      CacheEnabled: "true"
+
+  Stress-${STACK_NAMESPACE}:
+    Service:
+      StackContext: StressContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: ${stack_namespace}-orchestration.stress.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:898916586688:StressTeamsNotifier"
+      RabbitHostName: rabbitmq.stress.aetnadigital.net
+      RabbitProtocol: amqps
+      CvsHostname: "sit2-2waysslservices.caremark.com"
+
+  Stress-Master:
+    Service:
+      StackContext: StressContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: orchestration.stress.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:898916586688:StressTeamsNotifier"
+      RabbitHostName: rabbitmq.stress.aetnadigital.net
+      RabbitProtocol: amqps
+      CvsHostname: "sit2-2waysslservices.caremark.com"
+
+  Qa-Master:
+    Service:
+      StackContext: QaContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: orchestration.qa.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:898916586688:QaTeamsNotifier"
+      RabbitHostName: rabbitmq.qa.aetnadigital.net
+      RabbitProtocol: amqps
+      RabbitDefaultUser: amqps-fake-user # remove once added to Qa env
+      RabbitDefaultPass: amqps-fake-password # remove once added to Qa env
+      CvsHostname: "sit2-2waysslservices.caremark.com"
+      CvsWebComponentBaseUrl: "sit2fast.caremark.com"
+      ApicOauthUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/v5/auth/oauth2/token"
+      ApicAccountsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v3/accounts/"
+      ApicMembershipsUrl: "https://qaapih1.int.aetna.com/healthcare/qapath1/at/v5/memberships/"
+      DocasapUrl: "https://apitest.docasap.com:8443"
+      TeledocIssuer: "AETNA"
+      NodeEnvironment: "qa"
+      CacheEnabled: "true"
+
+  Prd-Master:
+    Service:
+      StackContext: PrdContext-Orchestration
+      HostPort: {Type: HostPort}
+      HostName: orchestration.prd.aetnadigital.net
+      SnsTopic: "arn:aws:sns:us-east-1:283993462732:PrdTeamsNotifier"
+      RabbitHostName: rabbitmq.prd.aetnadigital.net
+      RabbitProtocol: amqps
+      RabbitDefaultUser: amqps-fake-user # remove once added to Prd env
+      RabbitDefaultPass: amqps-fake-password # remove once added to Prd env
+      CvsHostname: "prod-2waysslservices.caremark.com"
+      CvsWebComponentBaseUrl: "fast.caremark.com"
+      ApicOauthUrl: "https://apih1.int.aetna.com/healthcare/prod/v5/auth/oauth2/token"
+      ApicAccountsUrl: "https://apih1.int.aetna.com/healthcare/prod/at/v3/accounts/"
+      ApicMembershipsUrl: "https://apih1.int.aetna.com/healthcare/prod/at/v5/memberships/"
+      DocasapUrl: "https://api.docasap.com:8443"
+      TeledocIssuer: "AETNASDK"
+      NodeEnvironment: "production"
+      CacheEnabled: "true"

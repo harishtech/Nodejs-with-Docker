@@ -1,0 +1,18 @@
+{
+  "id": "8c9a31e6-ab03-4fe6-92ee-e4e28ca9fb77",
+  "data": {
+    "results": [
+      {
+        "id": "3f4237efeb69f138202f09a77722b2fb",
+        "type": "medication",
+        "text": "Jolessa Tab"
+      },
+      {
+        "id": "005d3204bfe0f84f60bd467269a13fd3",
+        "type": "medication",
+        "text": "Jolivette 0.35mg 28-Day Tab"
+      }
+    ],
+    "weight": 0.9
+  }
+}

@@ -1,0 +1,47 @@
+version: "3.1"
+
+services:
+  service: &service
+    image: orchestration_dev
+    volumes:
+      - .:/usr/src/app:delegated
+      - ./ci-artifacts:/tmp/ci-artifacts
+    stdin_open: true
+    tty: true
+    environment: &environment
+      NODE_ENV: production
+      RABBIT_PROTOCOL: amqp
+      RABBIT_USERNAME: guest
+      RABBIT_PASSWORD: guest
+      RABBIT_HOSTNAME: rabbit
+
+  development:
+    <<: *service
+    environment:
+      <<: *environment
+      NODE_ENV: development
+    command: ../node_modules/.bin/nodemon ./server/server.js
+    ports:
+      - 8080:8080
+      - 9229:9229
+    networks:
+      - ngx
+
+  test:
+    <<: *service
+    environment:
+      <<: *environment
+      NODE_ENV: test
+      CONN_ENV: LOCAL
+      APIC_QAPATH_3_ID: test-apic-id
+      APIC_QAPATH_3_SECRET: test-apic-secret
+      CVS_API_KEY: test-cvs-api-key
+      CVS_API_SECRET: test-cvs-api-secret
+      CVS_CA_CRT: test-cvs-ca-crt
+      CVS_TLS_CRT: test-cvs-tls-crt
+      CVS_TLS_KEY: test-cvs-tls-key
+
+networks:
+  ngx:
+    external:
+      name: ngx-services

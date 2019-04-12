@@ -1,0 +1,21 @@
+{
+  "provider_npi": 1073740304,
+  "da_location_id": 229161,
+  "da_reason_id": 15537,
+  "scheduling_workflow_questions": [
+    {
+      "da_workflow_question_id": 18,
+      "user_answer": [
+        "1994-01-01"
+      ]
+    },
+    {
+      "da_workflow_question_id": 19,
+      "user_answer": [
+        "Yes"
+      ]
+    }
+  ],
+  "start_date": "2018-12-15",
+  "end_date": "2018-12-20"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "79cbeafc-c160-412c-ac64-4da23e1d34f4",
+  "data": {
+    "results": [
+      {
+        "id": "0009016839",
+        "text": "The Knee Joint, Inc",
+        "type": "facility",
+        "default_procedure": null
+      }
+    ],
+    "weight": 0.3
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "provider_npi": 1073740304,
+  "da_location_id": 229161,
+  "da_reason_id": 11640,
+  "input_workflow_node": {
+    "da_workflow_node_id": 7058,
+    "input_workflow_questions": [
+      {
+        "da_workflow_question_id": 19,
+        "user_answer": [
+          "Yes"
+        ]
+      }
+    ]
+  }
+}

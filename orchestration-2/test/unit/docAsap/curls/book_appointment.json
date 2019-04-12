@@ -1,0 +1,61 @@
+{
+    "provider_npi": 1073740304,
+    "da_location_id": 229161,
+    "da_final_reason_id": 15537,
+    "da_slot_info": {
+        "is_same_day_slot": 0,
+        "time": 1545340200,
+        "slot_id": "6886",
+        "external_slot_id": "0",
+        "slot_type": 4,
+        "slot_duration": 600,
+        "external_reason_id": 0,
+        "reason_id": 0,
+        "appt_offset": 0,
+        "resource_id": 0
+    },
+    "da_channel_code": "aetna",
+    "patient_id": "aetna_qqq",
+    "patient_demographics": {
+        "first_name": "aetnafirst",
+        "last_name": "aetnalast",
+        "dob": "1994-01-01",
+        "gender": "M",
+        "address_street": "123 Test",
+        "address_city": "Potomac",
+        "address_state": "MD",
+        "address_zip": "20854",
+        "email": "test@test.com",
+        "cell_phone": "2303453456",
+        "notification_preference": "Email",
+        "ins_subscriber_id": 1234
+    },
+    "scheduling_workflow_questions": [{
+            "da_workflow_question_id": 18,
+            "user_answer": [
+                "1994-01-01"
+            ]
+        },
+        {
+            "da_workflow_question_id": 19,
+            "user_answer": [
+                "Yes"
+            ]
+        }
+    ],
+    "operational_questions": [{
+            "da_workflow_question_id": 373,
+            "user_answer": [
+                "No"
+            ]
+        },
+        {
+            "da_workflow_question_id": 374,
+            "user_answer": [
+                "Anti-allergy",
+                "Ibuprofen"
+            ]
+        }
+    ],
+    "platform": "M"
+}

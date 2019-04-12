@@ -1,0 +1,367 @@
+---
+Description: >
+    An ECS service for orchestrating with third party services.
+
+Parameters:
+
+  StackContext:
+    Type: String
+
+  HostPort:
+    Type: String
+
+  HostName:
+    Type: String
+
+  TlsCrt:
+    Type: String
+
+  TlsKey:
+    Type: String
+
+  CvsCaCrt:
+    Type: String
+
+  CvsTlsCrt:
+    Type: String
+
+  CvsTlsKey:
+    Type: String
+
+  CvsApiKey:
+    Type: String
+
+  CvsApiSecret:
+    Type: String
+
+  CvsHostname:
+    Type: String
+
+  CvsWebComponentBaseUrl:
+    Type: String
+
+  ApicOauthUrl:
+    Type: String
+
+  ApicAccountsUrl:
+    Type: String
+
+  ApicMembershipsUrl:
+    Type: String
+
+  DocasapUrl:
+    Type: String
+
+  SnsTopic:
+    Type: String
+
+  DocAsapSecret:
+    Type: String
+
+  DocAsapId:
+    Type: String
+
+  ApicId:
+    Type: String
+
+  ApicSecret:
+    Type: String
+
+  RabbitHostName:
+    Type: String
+
+  RabbitProtocol:
+    Type: String
+
+  RabbitmqDefaultUser:
+    Type: String
+
+  RabbitmqDefaultPass:
+    Type: String
+
+  RedisHostname:
+    Type: String
+
+  RedisAuthToken:
+    Type: String
+
+  CacheEnabled:
+    Type: String
+
+  NewRelicLicenseKey:
+    Type: String
+
+  TeledocRsaKey:
+    Type: String
+
+  TeledocIssuer:
+    Type: String
+
+  NodeEnvironment:
+    Type: String
+
+  CvsWebCompApiKey:
+    Type: String
+
+  CvsWebCompApiSecret:
+    Type: String
+Resources:
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName:
+        Ref: AWS::StackName
+
+  ## Customize your filter here for custom event triggers
+  MetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName:
+        Ref: LogGroup
+      FilterPattern: "status_code = 404"
+      MetricTransformations:
+      - MetricValue: '1'
+        MetricNamespace:
+          Ref: AWS::StackName
+        MetricName: '404Count'
+
+  Alarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: "Brief description for your alarm trigger"
+      MetricName: '404Count'
+      Namespace:
+        Ref: AWS::StackName
+      Statistic: Sum
+      Period: '60'
+      EvaluationPeriods: '2'
+      Threshold: '2'
+      AlarmActions:
+      - Ref: 'SnsTopic'
+      ComparisonOperator: GreaterThanThreshold
+
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
+    Properties:
+      AccessLoggingPolicy:
+        EmitInterval: 5
+        Enabled: true
+        S3BucketName:
+          Fn::ImportValue: !Sub '${StackContext}-AccessLogBucket'
+      Scheme: internal
+      Subnets:
+        Fn::Split:
+        - ','
+        - Fn::ImportValue: !Sub '${StackContext}-Subnets'
+      SecurityGroups:
+      - Fn::ImportValue: !Sub '${StackContext}-HttpSecurityGroupId'
+      Listeners:
+      - LoadBalancerPort: '443'
+        InstancePort:
+          Ref: HostPort
+        Protocol: TCP
+        InstanceProtocol: TCP
+      HealthCheck:
+        Target:
+          Fn::Sub: 'HTTPS:${HostPort}/healthcheck'
+        HealthyThreshold: '2'
+        UnhealthyThreshold: '2'
+        Interval: '5'
+        Timeout: '2'
+      ConnectionDrainingPolicy:
+        Enabled: 'false'
+
+  Service:
+    Type: AWS::ECS::Service
+    DependsOn: LoadBalancer
+    Properties:
+      Cluster:
+        Fn::ImportValue: !Sub '${StackContext}-Cluster'
+      Role:
+        Fn::ImportValue: !Sub '${StackContext}-ServiceRoleArn'
+      DesiredCount: 1
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 100
+      TaskDefinition: !Ref TaskDefinition
+      LoadBalancers:
+      - ContainerName: nginx
+        ContainerPort: 443
+        LoadBalancerName: !Ref LoadBalancer
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family:
+        Ref: AWS::StackName
+      TaskRoleArn:
+        Fn::ImportValue: !Sub '${StackContext}-TaskRoleArn'
+      ContainerDefinitions:
+      - Name: app
+        Image: orchestration
+        Cpu: 128
+        Memory: 128
+        EntryPoint:
+          - /usr/local/bin/stack_exec
+        Command: ["npm", "start"]
+        Environment:
+        - Name: DOCASAP_ID
+          Value:
+            Ref: DocAsapId
+        - Name: DOCASAP_SECRET
+          Value:
+            Ref: DocAsapSecret
+        - Name: STACK_EXEC_REGION
+          Value:
+            Ref: AWS::Region
+        - Name: CVS_CA_CRT
+          Value:
+            Ref: CvsCaCrt
+        - Name: CVS_TLS_CRT
+          Value:
+            Ref: CvsTlsCrt
+        - Name: CVS_TLS_KEY
+          Value:
+            Ref: CvsTlsKey
+        - Name: CVS_API_KEY
+          Value:
+            Ref: CvsApiKey
+        - Name: CVS_API_SECRET
+          Value:
+            Ref: CvsApiSecret
+        - Name: CVS_HOSTNAME
+          Value:
+            Ref: CvsHostname
+        - Name: CVS_WEB_COMPONENT_BASE_URL
+          Value:
+            Ref: CvsWebComponentBaseUrl
+        - Name: APIC_OAUTH_URL
+          Value:
+            Ref: ApicOauthUrl
+        - Name: APIC_ACCOUNTS_URL
+          Value:
+            Ref: ApicAccountsUrl
+        - Name: APIC_MEMBERSHIPS_URL
+          Value:
+            Ref: ApicMembershipsUrl
+        - Name: DOCASAP_URL
+          Value:
+            Ref: DocasapUrl
+        - Name: APIC_ID
+          Value:
+            Ref: ApicId
+        - Name: APIC_SECRET
+          Value:
+            Ref: ApicSecret
+        - Name: RABBIT_HOSTNAME
+          Value:
+            Ref: RabbitHostName
+        - Name: RABBIT_PROTOCOL
+          Value:
+            Ref: RabbitProtocol
+        - Name: RABBIT_USERNAME
+          Value:
+            Ref: RabbitmqDefaultUser
+        - Name: RABBIT_PASSWORD
+          Value:
+            Ref: RabbitmqDefaultPass
+        - Name: REDIS_HOSTNAME
+          Value:
+            Ref: RedisHostname
+        - Name: REDIS_AUTH_TOKEN
+          Value:
+            Ref: RedisAuthToken
+        - Name: CACHE_ENABLED
+          Value:
+            Ref: CacheEnabled
+        - Name: NEW_RELIC_KEY
+          Value:
+            Ref: NewRelicLicenseKey
+        - Name: TELEDOC_RSA_KEY
+          Value:
+            Ref: TeledocRsaKey
+        - Name: TELEDOC_ISSUER
+          Value:
+            Ref: TeledocIssuer
+        - Name: NODE_ENVIRONMENT
+          Value:
+            Ref: NodeEnvironment
+        - Name: CVS_WEB_COMP_API_KEY
+          Value:
+            Ref: CvsWebCompApiKey
+        - Name: CVS_WEB_COMP_API_SECRET
+          Value:
+            Ref: CvsWebCompApiSecret
+        - Name: STACK_EXEC_VARS
+          Value: DOCASAP_ID DOCASAP_SECRET CVS_CA_CRT CVS_TLS_CRT CVS_TLS_KEY CVS_API_KEY CVS_API_SECRET APIC_ID APIC_SECRET RABBIT_USERNAME RABBIT_PASSWORD REDIS_HOSTNAME REDIS_AUTH_TOKEN NEW_RELIC_KEY TELEDOC_RSA_KEY CVS_WEB_COMP_API_SECRET CVS_WEB_COMP_API_KEY
+        PortMappings: []
+        LogConfiguration:
+          LogDriver: awslogs
+          Options:
+            awslogs-group:
+              Ref: LogGroup
+            awslogs-region:
+              Ref: AWS::Region
+            awslogs-stream-prefix: orchestration
+      - Name: nginx
+        Image: nginx_1.14:Master
+        Cpu: 128
+        Memory: 128
+        EntryPoint: []
+        Command:
+        - /usr/local/bin/stack_exec
+        - /usr/local/bin/docker-entrypoint.sh
+        PortMappings:
+        - HostPort:
+            Ref: HostPort
+          ContainerPort: 443
+          Protocol: tcp
+        Links:
+        - app:app
+        Environment:
+        - Name: APP_HOST
+          Value: app
+        - Name: APP_PORT
+          Value: '8080'
+        - Name: TLS_CRT
+          Value:
+            Ref: TlsCrt
+        - Name: TLS_KEY
+          Value:
+            Ref: TlsKey
+        - Name: STACK_EXEC_REGION
+          Value:
+            Ref: AWS::Region
+        - Name: STACK_EXEC_VARS
+          Value: TLS_CRT TLS_KEY
+        LogConfiguration:
+          LogDriver: awslogs
+          Options:
+            awslogs-group:
+              Ref: LogGroup
+            awslogs-region:
+              Ref: AWS::Region
+            awslogs-stream-prefix: orchestration
+
+  InternalDnsRecord:
+    Type: Custom::AliasRecordSet
+    Properties:
+      ServiceToken:
+        Fn::ImportValue: !Sub '${StackContext}-AliasRecordSetServiceToken'
+      AliasTargetDnsName:
+        Fn::GetAtt: LoadBalancer.DNSName
+      AliasTargetHostedZoneId:
+        Fn::GetAtt: LoadBalancer.CanonicalHostedZoneNameID
+      HostName:
+        Ref: HostName
+
+Outputs:
+
+  Host:
+    Value:
+      Ref: HostName
+
+  LogGroup:
+    Value:
+      Ref: LogGroup

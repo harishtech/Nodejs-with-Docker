@@ -1,0 +1,6 @@
+# This container is only used by the ci pipeline
+# Adds testing tools that aren't required in the release container
+
+FROM orchestration
+
+RUN npm install -g eslint --quiet && npm install --quiet

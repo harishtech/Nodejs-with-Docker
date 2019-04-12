@@ -1,0 +1,45 @@
+{
+  "name": "orchestration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "mocha --recursive test/unit --exit",
+    "test-watch": "nodemon --exec 'npm test'",
+    "test-smoke": "mocha --recursive test/smoke-tests --exit",
+    "flush-redis": "node server/utils/redis/flush-redis.js",
+    "lint": "eslint server test",
+    "lint:fix": "eslint --fix server test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fast-xml-parser": "^3.12.14",
+    "jsonwebtoken": "^8.3.0",
+    "lodash.get": "^4.4.2",
+    "newrelic": "^4.9.0",
+    "pino": "^5.6.0",
+    "redis": "^2.8.0",
+    "simple-oauth2": "^1.5.2",
+    "uuidv4": "^1.0.1",
+    "xml-js": "^1.6.7"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "dotenv": "^6.1.0",
+    "eslint": "^5.13.0",
+    "lodash.merge": "^4.6.1",
+    "mocha": "^5.2.0",
+    "nock": "^9.3.0",
+    "nodemon": "^1.17.5",
+    "pino-pretty": "^2.2.1",
+    "sinon": "^5.1.0",
+    "supertest": "^3.1.0"
+  }
+}

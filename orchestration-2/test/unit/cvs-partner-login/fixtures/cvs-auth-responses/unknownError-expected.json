@@ -1,0 +1,11 @@
+{
+    "data": {
+        "detail": "CVS 7009 - Multiple Plans found.",
+        "status": 500,
+        "title": "Internal Server Error"
+    },
+    "error": true,
+    "payload": {
+        "data": "<response><header><statusCode>7009</statusCode><statusDesc>Multiple Plans found.</statusDesc><refId>Id-66c4e55b0b6d267a67dcafa5</refId></header><details></details></response>"
+    }
+}

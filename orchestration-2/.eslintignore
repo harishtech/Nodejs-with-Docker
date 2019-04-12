@@ -1,0 +1,3 @@
+server/features.json
+server/smoke-tests/**
+server/typeahead/**
